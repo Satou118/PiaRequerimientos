@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/index.css">
+    <title>Principal</title>
+</head>
+<body>
+    <header>
+        <h1>Cinépolis - Servicio de Fila Virtual</h1>
+    </header>
+      
+    <div class="container">
+        <!-- Tarjeta de película -->
+        <div class="movie-card">
+          <h2 class="movie-title">Película 1</h2>
+          <p>Descripción breve de la película.</p>
+          <button class="join-queue-btn" onclick="joinQueue()">Unirse a la fila</button>
+          <div class="queue-info" id="queueInfo">
+            <p>Personas delante de ti en la fila: <span id="peopleAhead">0</span></p>
+            <p>Tiempo estimado para tu turno: <span id="timer">00:00</span></p>
+          </div>
+        </div>
+    </div>
+
+    <script src="Js/logica.js"></script>
+</body>
+</html>
