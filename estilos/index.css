@@ -3,30 +3,79 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-  }
-  header {
+}
+header {
     background-color: #003366;
     color: white;
     padding: 1rem;
     text-align: center;
-  }
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 1rem;
-  }
-  .movie-card {
-    background-color: white;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
+}
+
+nav ul {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 0 30px; 
+    margin: 0 30px;
+    display: block;
+}
+
+.Secciones {
+    background-color: #003366;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  .movie-title {
-    font-size: 1.5rem;
+
+.Secciones a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.Secciones a:hover {
+    background-color: #00d9ff;
+    color: black;
+  }
+  
+.Secciones a.active {
+    background-color: #00d9ff;
+    color: black
+  }
+
+.movie {
+    display: flex;
+    justify-content: center;
+    gap: 200px; 
+    flex-wrap: wrap; 
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.movie-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-title {
+    font-size: 2rem;
     color: #003366;
-  }
-  .join-queue-btn {
+}
+
+.join-queue-btn {
     background-color: #ff6600;
     color: white;
     border: none;
@@ -34,14 +83,36 @@ body {
     font-size: 1rem;
     border-radius: 3px;
     cursor: pointer;
-  }
-  .queue-info {
+}
+.queue-info {
     display: none;
     background-color: #fffae6;
     padding: 1rem;
     margin-top: 1rem;
     border-radius: 5px;
-  }
-  .queue-info.active {
+}
+.queue-info.active {
     display: block;
-  }
+}
+
+.elegant-image-container {
+    margin: 20px auto; 
+    overflow: hidden;
+    border-radius: 10px; 
+}
+.elegant-image-container img { 
+    height: auto; 
+    transition: transform 0.3s ease; 
+}
+
+.elegant-image-container img:hover {
+    transform: scale(1.05);
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    border-radius: 8px;
+    min-height: 200px;
+}

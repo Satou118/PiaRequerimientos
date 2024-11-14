@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/atncliente.css">
+    <title>Atencion al Cliente</title>
+</head>
+<body>
+    <header>
+        <h1>Cinépolis - Atención al Cliente</h1>
+    </header>
+
+    <nav>
+        <ul class="Secciones">
+            <li><a href="index.html">SERVICIO FILA VIRTUAL</a></li>
+            <li><a href="atncliente.html">ATENCION AL CLIENTE</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Sección de texto a la izquierda -->
+        <div class="left-section">
+            <h2>¡QUEREMOS ESCUCHARTE!<br>Déjanos tus comentarios</h2>
+        </div>
+    
+        <!-- Sección del formulario -->
+        <div class="contact-section form-section">
+            <h3>Datos personales</h3>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número de teléfono</label>
+                <input type="text" id="telefono" placeholder="Número de teléfono">
+            </div>
+    
+            <h3>Datos del cine</h3>
+            <div class="form-group">
+                <label for="ciudad">Ciudad</label>
+                <select id="ciudad">
+                    <option>Selecciona tu ciudad</option>
+                    <!-- Opciones de ciudades -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cine">Cine</label>
+                <select id="cine">
+                    <option>Selecciona un complejo</option>
+                    <!-- Opciones de complejos -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+            </div>
+    
+            <h3>Comentario</h3>
+            <div class="form-group">
+                <label for="tipoComentario">Algún comentario que quisiera agregar:</label>
+                <textarea id="mensaje" rows="4" placeholder="Escribe tu comentario"></textarea>
+            </div>
+            <button class="submit-btn">Enviar</button>
+        </div>
+    </div>
+</body>
+</html>

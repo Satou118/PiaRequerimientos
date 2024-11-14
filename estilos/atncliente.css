@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 0 30px; 
+    margin: 0 30px;
+    display: block;
+}
+
+.Secciones {
+    background-color: #003366;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+.Secciones a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.Secciones a:hover {
+    background-color: #00d9ff;
+    color: black;
+}
+  
+.Secciones a.active {
+    background-color: #00d9ff;
+    color: black
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-section {
+    width: 60%;
+}
+
+.form-section h3 {
+    color: #003366;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #002244;
+}
+
+.left-section {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-section h2 {
+    color: #ff007f;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: bold;
+}

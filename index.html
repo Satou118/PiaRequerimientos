@@ -10,17 +10,52 @@
     <header>
         <h1>Cinépolis - Servicio de Fila Virtual</h1>
     </header>
-      
-    <div class="container">
-        <!-- Tarjeta de película -->
+
+    <nav>
+        <ul class="Secciones">
+            <li><a href="index.html">SERVICIO FILA VIRTUAL</a></li>
+            <li><a href="atncliente.html">ATENCIÓN AL CLIENTE</a></li>
+        </ul>
+    </nav>
+
+    <div class="movie">
+        <!-- Tarjeta de película 1 -->
         <div class="movie-card">
-          <h2 class="movie-title">Película 1</h2>
-          <p>Descripción breve de la película.</p>
-          <button class="join-queue-btn" onclick="joinQueue()">Unirse a la fila</button>
-          <div class="queue-info" id="queueInfo">
-            <p>Personas delante de ti en la fila: <span id="peopleAhead">0</span></p>
-            <p>Tiempo estimado para tu turno: <span id="timer">00:00</span></p>
-          </div>
+            <h2 class="movie-title">Atentado En Madrid</h2>
+            <div class="elegant-image-container">
+                <figure class="imagen"><img src="images/47571.jpg" alt="" width="275" height="350"></figure>
+            </div>
+            <button class="join-queue-btn" onclick="joinQueue('queueInfo1', 'peopleAhead1', 'timer1')">Unirse a la fila</button>
+            <div class="queue-info" id="queueInfo1">
+                <p>Personas delante de ti en la fila: <span id="peopleAhead1">0</span></p>
+                <p>Tiempo estimado para tu turno: <span id="timer1">00:00</span></p>
+            </div>
+        </div>
+
+        <!-- Tarjeta de película 2 -->
+        <div class="movie-card">
+            <h2 class="movie-title">Código Traje Rojo</h2>
+            <div class="elegant-image-container">
+                <figure class="imagen"><img src="images/47807.jpg" alt="" width="275" height="350"></figure>
+            </div>
+            <button class="join-queue-btn" onclick="joinQueue('queueInfo2', 'peopleAhead2', 'timer2')">Unirse a la fila</button>
+            <div class="queue-info" id="queueInfo2">
+                <p>Personas delante de ti en la fila: <span id="peopleAhead2">0</span></p>
+                <p>Tiempo estimado para tu turno: <span id="timer2">00:00</span></p>
+            </div>
+        </div>
+
+        <!-- Tarjeta de película 3 -->
+        <div class="movie-card">
+            <h2 class="movie-title">El Tiempo Que Tenemos</h2>
+            <div class="elegant-image-container">
+                <figure class="imagen"><img src="images/47609.jpg" alt="" width="275" height="350"></figure>
+            </div>
+            <button class="join-queue-btn" onclick="joinQueue('queueInfo3', 'peopleAhead3', 'timer3')">Unirse a la fila</button>
+            <div class="queue-info" id="queueInfo3">
+                <p>Personas delante de ti en la fila: <span id="peopleAhead3">0</span></p>
+                <p>Tiempo estimado para tu turno: <span id="timer3">00:00</span></p>
+            </div>
         </div>
     </div>
 

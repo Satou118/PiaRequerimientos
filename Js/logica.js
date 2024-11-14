@@ -1,36 +1,46 @@
-let peopleAhead;
-  let timeRemaining;
-  let intervalId;
+// Objeto para almacenar información de cada fila
+const queues = {};
 
-  function joinQueue() {
-    // Establece personas en la fila y tiempo total
-    peopleAhead = Math.floor(Math.random() * 10) + 5; // Número aleatorio de personas en la fila
-    timeRemaining = peopleAhead * 5; // 5 segundos por persona
+function joinQueue(queueId, peopleAheadId, timerId) {
+    // Configura una fila específica para cada película
+    if (!queues[queueId]) {
+        const peopleAhead = Math.floor(Math.random() * 10) + 5; // Número aleatorio de personas
+        const timeRemaining = peopleAhead * 5; // 5 segundos por persona
 
-    document.getElementById('peopleAhead').innerText = peopleAhead;
-    document.getElementById('queueInfo').classList.add('active');
+        queues[queueId] = {
+            peopleAhead,
+            timeRemaining,
+            intervalId: null,
+            peopleAheadElement: document.getElementById(peopleAheadId),
+            timerElement: document.getElementById(timerId)
+        };
 
-    // Inicia el temporizador que actualiza la fila cada segundo
-    intervalId = setInterval(updateQueue, 1000);
-  }
+        document.getElementById(peopleAheadId).innerText = peopleAhead;
+        document.getElementById(queueId).classList.add('active');
 
-  function updateQueue() {
-    if (timeRemaining > 0 && peopleAhead > 0) {
-      timeRemaining--;
-
-      // Reduce el número de personas en la fila cada 5 segundos
-      if (timeRemaining % 5 === 0) {
-        peopleAhead--;
-        document.getElementById('peopleAhead').innerText = peopleAhead;
-      }
-
-      // Actualiza el temporizador
-      let minutes = Math.floor(timeRemaining / 60);
-      let seconds = timeRemaining % 60;
-      document.getElementById('timer').innerText = 
-        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    } else {
-      clearInterval(intervalId);
-      document.getElementById('timer').innerText = "¡Es tu turno!";
+        // Inicia el temporizador
+        queues[queueId].intervalId = setInterval(() => updateQueue(queueId), 1000);
     }
-  }
+}
+
+function updateQueue(queueId) {
+    const queue = queues[queueId];
+
+    if (queue.timeRemaining > 0 && queue.peopleAhead > 0) {
+        queue.timeRemaining--;
+
+        // Reduce el número de personas en la fila cada 5 segundos
+        if (queue.timeRemaining % 5 === 0) {
+            queue.peopleAhead--;
+            queue.peopleAheadElement.innerText = queue.peopleAhead;
+        }
+
+        // Actualiza el temporizador
+        const minutes = Math.floor(queue.timeRemaining / 60);
+        const seconds = queue.timeRemaining % 60;
+        queue.timerElement.innerText = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    } else {
+        clearInterval(queue.intervalId);
+        queue.timerElement.innerText = "¡Es tu turno!";
+    }
+}
